@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Next.js Quiz App
 
-First, run the development server:
+This repository will contains a simple quiz application built using Next.js and React. The application will be providing an interactive quiz experience with immediate feedback and a final score.
 
 ```bash
 npm run dev
