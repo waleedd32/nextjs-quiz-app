@@ -26,7 +26,21 @@ const page = () => {
           <span>/{questions.length}</span>
         </h2>
       </div>
-      <div>{!showResult ? <div></div> : <div></div>}</div>
+      <div>
+        {!showResult ? (
+          <div>
+            {" "}
+            <h3>{questions[activeQuestion].question}</h3>
+            {answers.map((answer, idx) => (
+              <li>
+                <span>{answer}</span>
+              </li>
+            ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
     </div>
   );
 };
