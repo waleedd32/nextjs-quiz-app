@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { quiz } from "../data.js";
+import { quiz } from "../data.ts";
 
 const page = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -26,6 +26,7 @@ const page = () => {
           <span>/{questions.length}</span>
         </h2>
       </div>
+      <div>{!showResult ? <div></div> : <div></div>}</div>
     </div>
   );
 };
