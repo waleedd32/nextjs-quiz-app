@@ -22,7 +22,8 @@ const page = () => {
       <h1>Quiz Page</h1>
       <div>
         <h2>
-          Question: 1<span></span>
+          Question: {activeQuestion + 1}
+          <span>/{questions.length}</span>
         </h2>
       </div>
     </div>
