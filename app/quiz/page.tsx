@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { quiz } from "../data.ts";
+import { quiz } from "../data";
 
 const page = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -32,7 +32,12 @@ const page = () => {
             {" "}
             <h3>{questions[activeQuestion].question}</h3>
             {answers.map((answer, idx) => (
-              <li>
+              <li
+                key={idx}
+                className={
+                  selectedAnswerIndex === idx ? "li-selected" : "li-hover"
+                }
+              >
                 <span>{answer}</span>
               </li>
             ))}
