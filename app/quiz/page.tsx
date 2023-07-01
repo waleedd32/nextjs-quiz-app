@@ -54,6 +54,7 @@ const page = () => {
                 <span>{answer}</span>
               </li>
             ))}
+            {checked ? <button>next</button> : <button> previous</button>}
           </div>
         ) : (
           <div></div>
