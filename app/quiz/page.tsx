@@ -17,8 +17,17 @@ const page = () => {
   const { questions } = quiz;
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
-  //   Select and check answer
-  const onAnswerSelected = (answer, idx) => {};
+  const onAnswerSelected = (answer, idx) => {
+    setChecked(true);
+    setSelectedAnswerIndex(idx);
+    if (answer === correctAnswer) {
+      setSelectedAnswer(true);
+      console.log("true");
+    } else {
+      setSelectedAnswer(false);
+      console.log("false");
+    }
+  };
 
   return (
     <div className="container">
