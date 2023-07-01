@@ -54,7 +54,13 @@ const page = () => {
                 <span>{answer}</span>
               </li>
             ))}
-            {checked ? <button>next</button> : <button> previous</button>}
+            {checked ? (
+              <button onClick={nextQuestion} className="btn">
+                {activeQuestion === question.length - 1 ? "Finish" : "Next"}
+              </button>
+            ) : (
+              <button> previous</button>
+            )}
           </div>
         ) : (
           <div></div>
