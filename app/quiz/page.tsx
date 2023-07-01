@@ -59,7 +59,10 @@ const page = () => {
                 {activeQuestion === question.length - 1 ? "Finish" : "Next"}
               </button>
             ) : (
-              <button> previous</button>
+              <button onClick={nextQuestion} disabled className="btn-disabled">
+                {" "}
+                {activeQuestion === question.length - 1 ? "Finish" : "Next"}
+              </button>
             )}
           </div>
         ) : (
