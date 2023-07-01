@@ -17,6 +17,9 @@ const page = () => {
   const { questions } = quiz;
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
+  //   Select and check answer
+  const onAnswerSelected = (answer, idx) => {};
+
   return (
     <div className="container">
       <h1>Quiz Page</h1>
@@ -34,6 +37,7 @@ const page = () => {
             {answers.map((answer, idx) => (
               <li
                 key={idx}
+                onClick={() => onAnswerSelected(answer, idx)}
                 className={
                   selectedAnswerIndex === idx ? "li-selected" : "li-hover"
                 }
