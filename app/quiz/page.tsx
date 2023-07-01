@@ -40,7 +40,7 @@ const page = () => {
       </div>
       <div>
         {!showResult ? (
-          <div>
+          <div className="quiz-container">
             {" "}
             <h3>{questions[activeQuestion].question}</h3>
             {answers.map((answer, idx) => (
