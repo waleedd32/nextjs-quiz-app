@@ -90,7 +90,13 @@ const page = () => {
             )}
           </div>
         ) : (
-          <div></div>
+          <div className="quiz-container">
+            <h3>Results</h3>
+            <h3>Overall {(result.score / 25) * 100}%</h3>
+            <p>
+              Total Questions: <span>{questions.length}</span>
+            </p>
+          </div>
         )}
       </div>
     </div>
