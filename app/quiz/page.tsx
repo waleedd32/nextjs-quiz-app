@@ -44,6 +44,13 @@ const page = () => {
             wrongAnswers: prev.wrongAnswers + 1,
           }
     );
+    if (activeQuestion !== questions.length - 1) {
+      setActiveQuestion((prev) => prev + 1);
+    } else {
+      setActiveQuestion(0);
+      setShowResult(true);
+    }
+    setChecked(false);
   };
 
   return (
