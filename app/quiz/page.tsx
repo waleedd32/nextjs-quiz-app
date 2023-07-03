@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { quiz } from "../data";
+import AnswerOption from "./AnswerOption";
 
 const page = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -17,6 +18,7 @@ const page = () => {
   const { questions } = quiz;
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
+  //   Select and check answer
   const onAnswerSelected = (answer, idx) => {
     setChecked(true);
     setSelectedAnswerIndex(idx);
@@ -65,18 +67,14 @@ const page = () => {
       <div>
         {!showResult ? (
           <div className="quiz-container">
-            {" "}
             <h3>{questions[activeQuestion].question}</h3>
             {answers.map((answer, idx) => (
-              <li
-                key={idx}
-                onClick={() => onAnswerSelected(answer, idx)}
-                className={
-                  selectedAnswerIndex === idx ? "li-selected" : "li-hover"
-                }
-              >
-                <span>{answer}</span>
-              </li>
+              <AnswerOption
+                key={answer}
+                answer={answer}
+                onAnswerSelected={() => onAnswerSelected(answer, idx)}
+                isSelected={selectedAnswerIndex === idx}
+              />
             ))}
             {checked ? (
               <button onClick={nextQuestion} className="btn">
