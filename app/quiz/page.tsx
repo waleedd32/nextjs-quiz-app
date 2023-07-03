@@ -29,6 +29,23 @@ const page = () => {
     }
   };
 
+  // Calculate score and increment to next question
+  const nextQuestion = () => {
+    setSelectedAnswerIndex(null);
+    setResult((prev) =>
+      selectedAnswer
+        ? {
+            ...prev,
+            score: prev.score + 5,
+            correctAnswers: prev.correctAnswers + 1,
+          }
+        : {
+            ...prev,
+            wrongAnswers: prev.wrongAnswers + 1,
+          }
+    );
+  };
+
   return (
     <div className="container">
       <h1>Quiz Page</h1>
