@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-const Home = ({ quizUrl = "/quiz" }) => {
+interface HomeProps {
+  quizUrl?: string;
+}
+
+const Home: React.FC<HomeProps> = ({ quizUrl = "/quiz" }) => {
   return (
     <main>
       <div className="container">
