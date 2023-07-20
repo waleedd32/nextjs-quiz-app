@@ -1,4 +1,16 @@
-export const quiz = {
+interface Question {
+  id: number;
+  question: string;
+  answers: string[];
+  correctAnswer: string;
+}
+
+interface Quiz {
+  totalQuestions: number;
+  questions: Question[];
+}
+
+export const quiz: Quiz = {
   totalQuestions: 5,
   questions: [
     {
