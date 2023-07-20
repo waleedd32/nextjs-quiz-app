@@ -1,6 +1,16 @@
 import React from "react";
 
-const AnswerOption = ({ answer, onAnswerSelected, isSelected }) => {
+interface AnswerOptionProps {
+  answer: string;
+  onAnswerSelected: () => void;
+  isSelected: boolean;
+}
+
+const AnswerOption: React.FC<AnswerOptionProps> = ({
+  answer,
+  onAnswerSelected,
+  isSelected,
+}) => {
   return (
     <li
       key={answer}
