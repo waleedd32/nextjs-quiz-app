@@ -3,13 +3,21 @@ import React, { useState } from "react";
 import { quiz } from "../data";
 import AnswerOption from "./AnswerOption";
 
-const page = () => {
-  const [activeQuestion, setActiveQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-  const [checked, setChecked] = useState(false);
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [showResult, setShowResult] = useState(false);
-  const [result, setResult] = useState({
+interface Result {
+  score: number;
+  correctAnswers: number;
+  wrongAnswers: number;
+}
+
+const Page: React.FC = () => {
+  const [activeQuestion, setActiveQuestion] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<boolean | string>("");
+  const [checked, setChecked] = useState<boolean>(false);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(
+    null
+  );
+  const [showResult, setShowResult] = useState<boolean>(false);
+  const [result, setResult] = useState<Result>({
     score: 0,
     correctAnswers: 0,
     wrongAnswers: 0,
@@ -19,7 +27,7 @@ const page = () => {
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
   //   Select and check answer
-  const onAnswerSelected = (answer, idx) => {
+  const onAnswerSelected = (answer: string, idx: number) => {
     setChecked(true);
     setSelectedAnswerIndex(idx);
     if (answer === correctAnswer) {
@@ -111,4 +119,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
