@@ -1,8 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Next.js Quiz App
+## Quiz App - Next.js
 
-This repository will contains a simple quiz application built using Next.js and React. The application will be providing an interactive quiz experience with immediate feedback and a final score.
+Quiz App is a dynamic and interactive quiz application built with Next.js and TypeScript.
+
+## Project Description
+
+This application offers a simple yet robust platform for testing your general knowledge. Users can answer a variety of questions and get instant feedback on their progress. The quiz application also displays final results which include the total score, the number of correct answers, and the number of wrong answers.
 
 ```bash
 npm run dev
