@@ -8,6 +8,18 @@ Quiz App is a dynamic and interactive quiz application built with Next.js and Ty
 
 This application offers a simple yet robust platform for testing your general knowledge. Users can answer a variety of questions and get instant feedback on their progress. The quiz application also displays final results which include the total score, the number of correct answers, and the number of wrong answers.
 
+## Features
+
+- Home Page - Here, you can start the quiz by clicking the "Start Quiz" button.
+- Quiz Page - You can select an answer for each question. After each question, you can navigate to the next question. At the end of the quiz, you can see the result.
+
+## Technologies
+
+- Next.js
+- TypeScript
+- React
+- CSS
+
 ```bash
 npm run dev
 # or
