@@ -20,6 +20,22 @@ This application offers a simple yet robust platform for testing your general kn
 - React
 - CSS
 
+## Installation
+
+To get started with this project locally, follow these instructions:
+
+1. First, clone the repository to your local machine
+2. Navigate into the project directory
+3. Install the project dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+4.Finally, run the project:
+
 ```bash
 npm run dev
 # or
